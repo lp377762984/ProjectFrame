@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="250dp"
+    tools:context="com.nettech.projectframe.view.LoginActivity">
+
+    <ImageView
+        android:id="@+id/im_head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/et_phone_parent"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_head">
+
+        <android.support.design.widget.TextInputEditText
+            android:maxLines="1"
+            android:inputType="number"
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号码"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/et_parent_psd"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:maxLines="1"
+            android:inputType="number"
+            android:id="@+id/et_psd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入验证码"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="登陆"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="@+id/et_parent_psd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_parent_psd"
+        app:layout_constraintTop_toBottomOf="@+id/et_parent_psd" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        android:text="发送验证码"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/et_parent_psd"
+        app:layout_constraintTop_toBottomOf="@+id/et_parent_psd" />
+
+</android.support.constraint.ConstraintLayout>
